@@ -21,15 +21,8 @@ jobs:
         distribution: 'temurin'
         cache: maven
 
-    - name: Build with Maven
-      run: mvn clean compile
-
-    - name: Run Tests
-      run: mvn test
-
-    - name: Generate Allure Report
-      if: always()
-      run: mvn allure:report
+    - name: Build and Run Tests
+      run: mvn clean test
 
     - name: Upload Allure Results
       if: always()
@@ -38,7 +31,7 @@ jobs:
         name: allure-results
         path: target/allure-results
 
-    - name: Upload Test Reports
+    - name: Upload Surefire Reports
       if: always()
       uses: actions/upload-artifact@v3
       with:
