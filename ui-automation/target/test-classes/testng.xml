@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-current.dtd">
+<suite name="AI-Powered UI Automation Suite" parallel="none" thread-count="1" verbose="2">
+    <test name="AI-Enhanced E-Commerce Test Suite">
+        <classes>
+            <class name="com.project.ai.ui.UITestWithAILayers"/>
+        </classes>
+    </test>
+</suite>

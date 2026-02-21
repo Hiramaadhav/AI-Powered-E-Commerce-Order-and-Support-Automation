@@ -1,0 +1,56 @@
+services:
+  # PostgreSQL Database for Healenium
+  postgres:
+    image: postgres:15-alpine
+    container_name: healenium-postgres
+    environment:
+      POSTGRES_DB: healenium
+      POSTGRES_USER: healenium_user
+      POSTGRES_PASSWORD: healenium_password
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+      - ./postgres-init.sql:/docker-entrypoint-initdb.d/init.sql:ro
+    networks:
+      - healenium-network
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U healenium_user"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+  # Healenium Server
+  healenium-server:
+    image: healenium/hlm-backend:3.4.5
+    container_name: healenium-server
+    environment:
+      SPRING_DATASOURCE_URL: jdbc:postgresql://postgres:5432/healenium
+      SPRING_DATASOURCE_USERNAME: healenium_user
+      SPRING_DATASOURCE_PASSWORD: healenium_password
+      SPRING_JPA_HIBERNATE_DDL_AUTO: update
+      SPRING_DATASOURCE_HIKARI_SCHEMA: public
+      SPRING_JPA_PROPERTIES_HIBERNATE_DEFAULT_SCHEMA: public
+      SERVER_PORT: 9090
+      JAVA_OPTS: "-Xmx512m -Xms256m"
+    ports:
+      - "9090:9090"
+    depends_on:
+      postgres:
+        condition: service_healthy
+    networks:
+      - healenium-network
+    healthcheck:
+      test: ["CMD", "wget", "--spider", "-q", "http://localhost:9090/actuator/health"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 60s
+    restart: on-failure
+
+volumes:
+  postgres_data:
+
+networks:
+  healenium-network:
+    driver: bridge
