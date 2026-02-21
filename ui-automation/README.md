@@ -91,9 +91,30 @@ mvn clean test -Dapi.fail.on.anomaly=true
 mvn allure:serve
 ```
 
+### CI/CD - GitHub Actions
+This project includes an automated **GitHub Actions** workflow that:
+- ✅ **Builds** the Maven project on every push and pull request
+- ✅ **Runs TestNG tests** automatically
+- ✅ **Generates Allure reports**
+- ✅ **Uploads test artifacts** for review
+
+**Workflow Location**: `.github/workflows/build.yml`
+
+**Triggered on:**
+- Push to `master` or `develop` branches
+- Pull requests to `master` or `develop` branches
+
+**View Results:**
+1. Go to **Actions** tab in GitHub repository
+2. Select a workflow run
+3. Download artifacts (Allure results, Surefire reports)
+
 ## 📁 Project Structure
 
 ```
+.github/
+└── workflows/
+    └── build.yml                        # GitHub Actions CI/CD workflow
 src/
 ├── main/
 │   └── java/com/project/
@@ -314,5 +335,6 @@ For issues or contributions:
 
 ---
 
-**Last Updated**: February 2026
+**Last Updated**: February 22, 2026
 **Framework Version**: 1.0-SNAPSHOT
+**CI/CD**: GitHub Actions Enabled
