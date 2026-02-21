@@ -7,68 +7,64 @@ on:
 jobs:
   test:
     runs-on: ubuntu-latest
-    
+
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
-      
+
       - name: Set up Java
         uses: actions/setup-java@v4
         with:
           java-version: '8'
           distribution: 'temurin'
           cache: maven
-      
+
       - name: Run tests
         working-directory: ./ui-automation
-        run: mvn clean test -DskipTests=false
-        continue-on-error: true
-      
+        run: mvn clean test
+
+      # 🔥 Install Allure CLI
+      - name: Install Allure CLI
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y wget unzip
+          wget https://github.com/allure-framework/allure2/releases/latest/download/allure-2.24.0.tgz
+          tar -zxvf allure-2.24.0.tgz
+          sudo mv allure-2.24.0 /opt/allure
+          sudo ln -s /opt/allure/bin/allure /usr/bin/allure
+          allure --version
+
+      # 🔥 Generate Allure HTML Report
       - name: Generate Allure Report
         working-directory: ./ui-automation
-        if: always()
         run: |
-          if command -v allure &> /dev/null; then
-            allure generate target/allure-results -o target/allure-report --clean
-          else
-            echo "Allure CLI not found, skipping report generation"
-          fi
-      
-      - name: Upload test results
-        if: always()
-        uses: actions/upload-artifact@v4
-        with:
-          name: allure-results
-          path: ui-automation/target/allure-results
-      
+          allure generate target/allure-results -o target/allure-report --clean
+
       - name: Upload Allure Report
-        if: always()
         uses: actions/upload-artifact@v4
         with:
           name: allure-report
           path: ui-automation/target/allure-report
-  
+
   publish-report:
     name: Publish to GitHub Pages
     needs: test
     runs-on: ubuntu-latest
-    if: always()
-    
+
     permissions:
       contents: write
       pages: write
       id-token: write
-    
+
     steps:
       - name: Download Allure Report
         uses: actions/download-artifact@v4
         with:
           name: allure-report
           path: allure-report
-      
+
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./allure-report
-          destination_dir: ${{ github.ref_name }}
