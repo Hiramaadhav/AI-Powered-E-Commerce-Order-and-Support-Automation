@@ -11,10 +11,14 @@ public class Page_Locators {
     public static final By EnterName = By.xpath("//input[@placeholder='Name']");
     public static final By EnterEmail = By.xpath("//input[@data-qa='signup-email']");
     public static final By ClickOnSignupButton = By.xpath("//button[normalize-space()='Signup']");
+    public static final By SelectTitleMr = By.id("id_gender1");
+    public static final By SelectTitleMrs = By.id("id_gender2");
     public static final By SetPassword = By.id("password");
     public static final By SelectDay = By.id("days");
     public static final By SelectMonth = By.id("months");
     public static final By SelectYear = By.id("years");
+    public static final By SignupNewsletter = By.id("newsletter");
+    public static final By SignupSpecialOffers = By.id("optin");
     public static final By EnterFirstName = By.id("first_name");
     public static final By EnterLastName = By.id("last_name");
     public static final By EnterCompanyName = By.id("company");
@@ -53,6 +57,7 @@ public class Page_Locators {
     public static final By ClickOnViewProduct=By.xpath("(//a[normalize-space()='View Product' and contains(@href,'/product_details/1')])[1]");
     public static final By VerifyProductInfo=By.xpath("//div[@class='product-information']");
     public static final By SearchProduct=By.id("search_product");
+    public static final By ClickOnContinue=By.xpath("//a[normalize-space()='Continue']");
     public static final By ClickOnSearchButton=By.id("submit_search");
     public static final By VerifySearchedProductIsVisible=By.xpath("//h2[normalize-space()='Searched Products']");
     public static final By VerifySubscription=By.xpath("//h2[normalize-space()='Subscription']");

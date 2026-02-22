@@ -37,12 +37,31 @@ public class AuthPage {
         return actions.isDisplayed(Page_Locators.VerifyEnterAccountInformation);
     }
 
+    public void selectTitle(String title) {
+        Log.info(clazz, "Selecting title: " + title);
+        if (title != null && title.equalsIgnoreCase("Mrs")) {
+            actions.click(Page_Locators.SelectTitleMrs);
+        } else {
+            actions.click(Page_Locators.SelectTitleMr);
+        }
+    }
+
     public void fillAccountInfo(String password, String day, String month, String year) {
         Log.info(clazz, "Filling account information");
         actions.enterText(Page_Locators.SetPassword, password);
         actions.selectByText(Page_Locators.SelectDay, day);
         actions.selectByText(Page_Locators.SelectMonth, month);
         actions.selectByText(Page_Locators.SelectYear, year);
+    }
+
+    public void selectNewsletter() {
+        Log.info(clazz, "Selecting newsletter signup");
+        actions.click(Page_Locators.SignupNewsletter);
+    }
+
+    public void selectSpecialOffers() {
+        Log.info(clazz, "Selecting special offers");
+        actions.click(Page_Locators.SignupSpecialOffers);
     }
 
     public void fillAddressDetails(String firstName, String lastName, String company,
@@ -64,6 +83,11 @@ public class AuthPage {
     public void clickCreateAccount() {
         Log.info(clazz, "Clicking Create Account button");
         actions.click(Page_Locators.ClickOnCreateAccountButton);
+    }
+
+    public void clickContinue() {
+        Log.info(clazz, "Clicking Continue button");
+        actions.click(Page_Locators.ClickOnContinue);
     }
 
     public boolean isAccountCreated() {

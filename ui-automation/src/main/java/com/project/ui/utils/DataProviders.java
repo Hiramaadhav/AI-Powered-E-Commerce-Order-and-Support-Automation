@@ -8,9 +8,9 @@ public class DataProviders {
     public static Object[][] registerUserData() {
         return new Object[][] {
                 {
-                        "sdhsj",
-                        "tuimyuiokmimlkowty@gmail.com",
-                        "llkkjjhg@an671",
+                        "sdhsghbncj",
+                        "nebngmnjuthbbnhncbyutyeojsnhjc@gmail.com",
+                        "ihugybciutfebnj@6739",
                         "17",
                         "May",
                         "2004",
@@ -31,7 +31,7 @@ public class DataProviders {
     @DataProvider(name = "loginValidUserData")
     public static Object[][] loginValidUserData() {
         return new Object[][] {
-                {"hmhira@gmail.com", "Maadhav@1608"}
+                {"pohosseweufei@yopmail.com", "pohosseweufei@yopmail.com"}
         };
     }
 
@@ -101,8 +101,8 @@ public class DataProviders {
     public static Object[][] placeOrderAfterLoginData() {
         return new Object[][] {
                 {
-                        "mhhira@gmail.com",
-                        "Maadhav@1608",
+                        "fraufequoiffelleu@yopmail.com",
+                        "fraufequoiffelleu@yopmail.com",
                         "Maadhav",
                         "829292928272",
                         "123",
@@ -130,8 +130,8 @@ public class DataProviders {
     public static Object[][] downloadInvoiceData() {
         return new Object[][] {
                 {
-                        "maadhavhira@gmail.com",
-                        "Maadhav@1608",
+                        "mogoproujuffou@yopmail.com",
+                        "Mmogoproujuffou@yopmail.com",
                         "Maadhav",
                         "829201928281",
                         "817",

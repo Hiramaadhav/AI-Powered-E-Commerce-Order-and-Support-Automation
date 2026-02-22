@@ -1,4 +1,0 @@
-{
-  "responseCode" : "integer",
-  "products" : "array[object]"
-}

@@ -46,6 +46,11 @@ public class BaseTest {
         logger.info("========== START TEST: {} ==========", currentTestName);
         String url = Configreader.getProperty("url");
         driver.get(url);
+        
+        // Reset browser zoom to 100% after navigation
+        JavascriptExecutor js = (JavascriptExecutor) driver;
+        js.executeScript("document.body.style.zoom='100%'");
+        logger.info("Browser zoom level reset to 100% for test: {}", currentTestName);
     }
 
     @AfterMethod(alwaysRun = true)

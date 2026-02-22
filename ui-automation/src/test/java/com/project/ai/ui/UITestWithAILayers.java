@@ -5,7 +5,6 @@ import com.project.ai.ui.waits.SmartWaitManager;
 import com.project.ui.Base.BaseTest;
 import com.project.ui.Pages.*;
 import com.project.ui.utils.DataProviders;
-import org.openqa.selenium.By;
 import org.testng.Assert;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.AfterClass;
@@ -83,8 +82,8 @@ public class UITestWithAILayers extends BaseTest {
         smartWait.waitForPageReady();
 
         Assert.assertTrue(homePage.isHomePageVisible(), "Home page is not visible");
-        smartWait.waitForClickable(By.xpath("//a[contains(text(),'Signup')]"), "Signup Button").click();
-        visualAI.checkWindow("User on Signup/Login Page");
+        homePage.clickSignupLogin();
+        visualAI.checkWindow("Signup/Login Page");
 
         Assert.assertTrue(authPage.isNewUserSignupVisible(), "New user signup section not visible");
         authPage.enterSignupNameEmail(signupName, signupEmail);
@@ -92,6 +91,8 @@ public class UITestWithAILayers extends BaseTest {
 
         Assert.assertTrue(authPage.isEnterAccountInfoVisible(), "Account info section not visible");
         authPage.fillAccountInfo(accountInfoPassword, birthDay, birthMonth, birthYear);
+        authPage.selectNewsletter();
+        authPage.selectSpecialOffers();
 
         authPage.fillAddressDetails(firstName, lastName, company,
                 address1, address2, country, state, city, zipcode, mobile);
@@ -99,10 +100,13 @@ public class UITestWithAILayers extends BaseTest {
         authPage.clickCreateAccount();
         visualAI.checkWindow("Account Created Confirmation");
         Assert.assertTrue(authPage.isAccountCreated(), "Account created message not visible");
+        authPage.clickContinue();
+        Assert.assertTrue(authPage.isUserLoggedIn(), "User is not logged in after account creation");
 
         authPage.deleteAccount();
         visualAI.checkWindow("Account Deleted Confirmation");
         Assert.assertTrue(authPage.isAccountDeleted(), "Account deleted message not visible");
+        authPage.clickContinue();
         
         visualAI.endTest();
     }
@@ -123,9 +127,6 @@ public class UITestWithAILayers extends BaseTest {
         authPage.login(email, password);
         Assert.assertTrue(authPage.isUserLoggedIn(), "User is not logged in");
         visualAI.checkWindow("User Logged In Successfully");
-
-        authPage.deleteAccount();
-        Assert.assertTrue(authPage.isAccountDeleted(), "Account deleted message not visible");
         
         visualAI.endTest();
     }
@@ -406,8 +407,6 @@ public class UITestWithAILayers extends BaseTest {
 
         visualAI.checkWindow("Order Confirmation");
         Assert.assertTrue(paymentPage.isOrderPlaced(), "Order placed message not visible");
-        authPage.deleteAccount();
-        Assert.assertTrue(authPage.isAccountDeleted(), "Account deleted message not visible");
         
         visualAI.endTest();
     }
@@ -586,6 +585,7 @@ public class UITestWithAILayers extends BaseTest {
 
         checkoutPage.clickPlaceOrder();
         smartWait.waitForPageReady();
+        visualAI.checkWindow("Payment Form");
         paymentPage.fillPaymentDetails(nameOnCard, cardNumber,
                 cvc, expiryMonth, expiryYear);
         paymentPage.clickPay();
@@ -593,8 +593,6 @@ public class UITestWithAILayers extends BaseTest {
         visualAI.checkWindow("Order Confirmation");
         Assert.assertTrue(paymentPage.isOrderPlaced(), "Order placed message not visible");
         paymentPage.downloadInvoice();
-        authPage.deleteAccount();
-        Assert.assertTrue(authPage.isAccountDeleted(), "Account deleted message not visible");
         
         visualAI.endTest();
     }

@@ -1,6 +1,7 @@
 package com.project.ui.Pages;
 
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.By;
 import com.project.ui.Common.ElementActions;
 import com.project.ui.Locators.Page_Locators;
 import com.project.ui.utils.Log;
@@ -29,6 +30,11 @@ public class HomePage {
     public void clickSignupLogin() {
         Log.info(clazz, "Clicking Signup/Login");
         actions.click(Page_Locators.ClickOnSignupLogin);
+    }
+
+    public void clickSignup() {
+        Log.info(clazz, "Clicking Signup");
+        actions.click(By.xpath("//a[contains(text(),'Signup')]"));
     }
 
     public void clickProductPage() {
