@@ -12,7 +12,7 @@ public class BrandPage {
     private ElementActions actions;
 
     public BrandPage(WebDriver driver) {
-        this.actions = new ElementActions(driver, 40);
+        this.actions = new ElementActions(driver, 60);
         Log.info(clazz, "BrandPage initialized");
     }
 

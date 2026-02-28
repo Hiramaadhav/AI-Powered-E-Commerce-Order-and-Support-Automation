@@ -3,7 +3,7 @@
 <suite name="AI-Powered UI Automation Suite" parallel="none" thread-count="1" verbose="2">
     <test name="AI-Enhanced E-Commerce Test Suite">
         <classes>
-            <class name="com.project.ai.ui.UITestWithAILayers"/>
+            <class name="com.project.ai.ui.UITestWithAllLayers"/>
         </classes>
     </test>
 </suite>

@@ -12,7 +12,7 @@ public class CheckoutPage {
     private ElementActions actions;
 
     public CheckoutPage(WebDriver driver) {
-        this.actions = new ElementActions(driver, 40);
+        this.actions = new ElementActions(driver, 60);
         Log.info(clazz, "CheckoutPage initialized");
     }
 

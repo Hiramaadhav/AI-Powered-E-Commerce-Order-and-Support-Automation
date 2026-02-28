@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-current.dtd">
+<suite name="Automation Exercise - Complete Test Suite" parallel="none" thread-count="1" verbose="2">
+    <test name="All 24 Test Cases - Automation Exercise">
+        <classes>
+            <class name="com.project.ui.tests.UITestWithAllLayers"/>
+        </classes>
+    </test>
+</suite>

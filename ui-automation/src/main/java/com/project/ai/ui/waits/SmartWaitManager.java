@@ -188,6 +188,9 @@ public class SmartWaitManager {
                 ((JavascriptExecutor) driver).executeScript("return document.readyState").equals("complete")
             );
             
+            // Additional wait for page stability (wait for no dynamic changes for 1 second)
+            waitForPageStability();
+            
             // Wait for AJAX
             waitForAjaxComplete();
             
@@ -199,6 +202,34 @@ public class SmartWaitManager {
             
         } catch (Exception e) {
             Log.error(clazz, "Page load wait failed: " + e.getMessage());
+        }
+    }
+    
+    /**
+     * Wait for page to stop making changes (stability check)
+     */
+    private void waitForPageStability() {
+        try {
+            JavascriptExecutor js = (JavascriptExecutor) driver;
+            
+            Awaitility.await()
+                .atMost(10, TimeUnit.SECONDS)
+                .pollInterval(300, TimeUnit.MILLISECONDS)
+                .until(() -> {
+                    try {
+                        // Take a snapshot of the DOM
+                        Object initialDOM = js.executeScript("return document.body.innerHTML.length");
+                        Thread.sleep(500);
+                        Object finalDOM = js.executeScript("return document.body.innerHTML.length");
+                        return initialDOM.equals(finalDOM);
+                    } catch (Exception e) {
+                        return true;
+                    }
+                });
+                
+            Log.debug(clazz, "Page is stable");
+        } catch (ConditionTimeoutException e) {
+            Log.debug(clazz, "Page stability check timed out, continuing");
         }
     }
     

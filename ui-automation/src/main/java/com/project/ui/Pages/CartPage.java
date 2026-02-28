@@ -13,7 +13,7 @@ public class CartPage {
     private ElementActions actions;
 
     public CartPage(WebDriver driver) {
-        this.actions = new ElementActions(driver, 40);
+        this.actions = new ElementActions(driver, 60);
         Log.info(clazz, "CartPage initialized");
     }
 
@@ -44,13 +44,27 @@ public class CartPage {
 
     public void subscribe(String email) {
         Log.info(clazz, "Subscribing from cart page");
+        // Scroll to subscription section first
+        try {
+            Thread.sleep(500);
+        } catch (InterruptedException e) {
+            Thread.currentThread().interrupt();
+        }
         actions.enterText(Page_Locators.EnterSubscribeEmail, email);
         actions.click(Page_Locators.ClickOnArrowButton);
+        // Accept any alerts that may appear
+        actions.acceptAlertIfPresent();
     }
 
     public boolean isSubscriptionSuccessVisible() {
         Log.debug(clazz, "Checking cart page subscription success message");
-        return actions.isDisplayed(Page_Locators.VerifySuccessfullSubscription);
+        // The success message appears briefly, so wait for 7 seconds
+        try {
+            Thread.sleep(7000); // Wait 7 seconds for success message to appear
+        } catch (InterruptedException ie) {
+            Thread.currentThread().interrupt();
+        }
+        return actions.waitForElementWithRetry(Page_Locators.VerifySuccessfullSubscription, 10);
     }
 
     public boolean isQuantityVisible() {

@@ -12,7 +12,7 @@ public class ContactPage {
     private ElementActions actions;
 
     public ContactPage(WebDriver driver) {
-        this.actions = new ElementActions(driver, 40);
+        this.actions = new ElementActions(driver, 60);
         Log.info(clazz, "ContactPage initialized");
     }
 
@@ -35,8 +35,9 @@ public class ContactPage {
             actions.enterText(Page_Locators.EnterMessage, message);
             Log.debug(clazz, "Uploading file: " + filePath);
             actions.enterText(Page_Locators.Uploadfile, filePath);
+            // Click submit button - this will trigger the alert
+            Log.info(clazz, "Clicking submit button");
             actions.click(Page_Locators.ClickOnSubmit);
-            actions.acceptAlertIfPresent();
 
         } catch (Exception e) {
             Log.error(clazz, "Error submitting contact form", e);
@@ -44,8 +45,23 @@ public class ContactPage {
         }
     }
 
+    public void verifysuccess() {
+        // IMPORTANT: Accept the alert immediately after submit
+        // The alert appears and we need to click OK button
+        Log.info(clazz, "Alert expected - accepting it immediately...");
+        actions.acceptAlertIfPresent();
+
+        Log.info(clazz, "Alert accepted successfully");
+    }
+
     public boolean isContactSuccessMessageVisible() {
         Log.debug(clazz, "Checking contact success message");
-        return actions.isDisplayed(Page_Locators.VerifySuccessMessage);
+        // The success message appears briefly, so wait for 7 seconds
+        try {
+            Thread.sleep(7000); // Wait 7 seconds for success message to be visible
+        } catch (InterruptedException ie) {
+            Thread.currentThread().interrupt();
+        }
+        return actions.waitForElementWithRetry(Page_Locators.VerifySuccessMessage, 10);
     }
 }

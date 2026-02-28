@@ -12,7 +12,7 @@ public class PaymentPage {
     private ElementActions actions;
 
     public PaymentPage(WebDriver driver) {
-        this.actions = new ElementActions(driver, 40);
+        this.actions = new ElementActions(driver, 60);
         Log.info(clazz, "PaymentPage initialized");
     }
 

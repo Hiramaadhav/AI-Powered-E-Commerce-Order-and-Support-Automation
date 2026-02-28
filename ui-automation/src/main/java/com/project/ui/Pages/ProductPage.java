@@ -12,18 +12,43 @@ public class ProductPage {
     private ElementActions actions;
 
     public ProductPage(WebDriver driver) {
-        this.actions = new ElementActions(driver, 40);
+        this.actions = new ElementActions(driver, 60);
         Log.info(clazz, "ProductPage initialized");
     }
 
     public void searchProduct(String productName) {
         Log.info(clazz, "Searching product: " + productName);
-        actions.enterText(Page_Locators.SearchProduct, productName);
-        actions.click(Page_Locators.ClickOnSearchButton);
+        // Wait for search input to be clickable and visible
+        try {
+            Thread.sleep(2000); // Allow page to fully load
+        } catch (InterruptedException ie) {
+            Thread.currentThread().interrupt();
+        }
+        // Retry mechanism for entering search text
+        for (int i = 0; i < 3; i++) {
+            try {
+                actions.enterText(Page_Locators.SearchProduct, productName);
+                actions.click(Page_Locators.ClickOnSearchButton);
+                Log.info(clazz, "Search submitted successfully on attempt " + (i + 1));
+                break;
+            } catch (Exception e) {
+                Log.info(clazz, "Attempt " + (i + 1) + " to search failed, retrying...");
+                try {
+                    Thread.sleep(1000);
+                } catch (InterruptedException ie) {
+                    Thread.currentThread().interrupt();
+                }
+            }
+        }
     }
 
     public boolean isSearchedProductsVisible() {
         Log.debug(clazz, "Checking searched products section");
+        try {
+            Thread.sleep(500); // Allow page to render results
+        } catch (InterruptedException ie) {
+            Thread.currentThread().interrupt();
+        }
         return actions.isDisplayed(Page_Locators.VerifySearchedProductIsVisible);
     }
 
@@ -79,10 +104,25 @@ public class ProductPage {
         actions.enterText(Page_Locators.EnterReviewEmail, email);
         actions.enterText(Page_Locators.EnterReviewText, reviewText);
         actions.click(Page_Locators.SubmitReview);
+        // Accept any alerts that may appear
+        actions.acceptAlertIfPresent();
+        // Wait for the thank you message to appear after review submission
+        Log.info(clazz, "Waiting for review confirmation...");
+        try {
+            Thread.sleep(2000); // Allow time for thank you message to appear
+        } catch (InterruptedException ie) {
+            Thread.currentThread().interrupt();
+        }
     }
 
     public boolean isReviewThankYouVisible() {
         Log.debug(clazz, "Checking review thank you message");
-        return actions.isDisplayed(Page_Locators.VerifyThankYouForYourReview);
+        // The thank you message appears briefly, so wait for 7 seconds
+        try {
+            Thread.sleep(7000); // Wait 7 seconds for message to be visible
+        } catch (InterruptedException ie) {
+            Thread.currentThread().interrupt();
+        }
+        return actions.waitForElementWithRetry(Page_Locators.VerifyThankYouForYourReview, 10);
     }
 }

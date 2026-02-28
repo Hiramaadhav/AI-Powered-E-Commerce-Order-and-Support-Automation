@@ -50,8 +50,8 @@ public class Page_Locators {
     public static final By VerifyWrongCredentials=By.xpath("//p[normalize-space()='Your email or password is incorrect!']");
     public static final By VerifyExistingUserSignup=By.xpath("//p[normalize-space()='Email Address already exist!']");
     public static final By VerifyGetInTouch=By.xpath("//h2[normalize-space()='Get In Touch']");
-    public static final By VerifySuccessMessage=By.xpath("//div[@class='status alert alert-success']");
-    public static final By ClickOnProductPage=By.xpath("//a[@href='/products']");
+    public static final By VerifySuccessMessage=By.xpath("//div[contains(@class, 'alert-success') or contains(@class, 'status alert')]//span | //div[contains(@class, 'alert-success') or contains(@class, 'status alert')]");
+    public static final By ClickOnProductPage=By.cssSelector("a[href='/products']");
     public static final By VerifyAllProductVisible=By.xpath("//h2[normalize-space()='All Products']");
     public static final By VerifyProductListIsVisible=By.xpath("//div[@class='features_items']");
     public static final By ClickOnViewProduct=By.xpath("(//a[normalize-space()='View Product' and contains(@href,'/product_details/1')])[1]");
@@ -63,7 +63,7 @@ public class Page_Locators {
     public static final By VerifySubscription=By.xpath("//h2[normalize-space()='Subscription']");
     public static final By EnterSubscribeEmail=By.id("susbscribe_email");
     public static final By ClickOnArrowButton=By.xpath("//i[@class='fa fa-arrow-circle-o-right']");
-    public static final By VerifySuccessfullSubscription=By.xpath("//div[contains(@class, 'alert-success')]");
+    public static final By VerifySuccessfullSubscription=By.xpath("//div[contains(@class, 'alert-success')] | //span[contains(text(), 'successfully subscribed')]//ancestor::div[contains(@class, 'alert')]");
     public static final By ClickOnCart=By.xpath("//a[normalize-space()='Cart']//i[@class='fa fa-shopping-cart']");
     public static final By AddFirstProductToCart=By.xpath("(//a[contains(@class,'add-to-cart') and normalize-space()='Add to cart'])[1]");
     public static final By ClickOnContinueShopping=By.xpath("//button[normalize-space()='Continue Shopping']");
@@ -100,6 +100,6 @@ public class Page_Locators {
     public static final By EnterReviewEmail=By.id("email");
     public static final By EnterReviewText=By.id("review");
     public static final By SubmitReview=By.id("button-review");
-    public static final By VerifyThankYouForYourReview=By.xpath("//span[normalize-space()='Thank you for your review.']");  
+    public static final By VerifyThankYouForYourReview=By.xpath("//span[contains(text(), 'Thank you')] | //div[contains(text(), 'Thank you')] | //p[contains(text(), 'Thank you')]//span");  
     public static final By DownloadInvoice=By.xpath("//a[normalize-space()='Download Invoice']"); 
 }

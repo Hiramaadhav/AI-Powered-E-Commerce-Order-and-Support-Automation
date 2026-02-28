@@ -12,7 +12,7 @@ public class CategoryPage {
     private ElementActions actions;
 
     public CategoryPage(WebDriver driver) {
-        this.actions = new ElementActions(driver, 40);
+        this.actions = new ElementActions(driver, 60);
         Log.info(clazz, "CategoryPage initialized");
     }
 

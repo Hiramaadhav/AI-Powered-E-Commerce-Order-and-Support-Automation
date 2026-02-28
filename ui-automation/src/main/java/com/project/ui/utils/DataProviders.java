@@ -6,24 +6,27 @@ public class DataProviders {
 
     @DataProvider(name = "registerUserData")
     public static Object[][] registerUserData() {
+        // Generate unique email using timestamp to avoid conflicts
+        String uniqueEmail = "testuser" + System.currentTimeMillis() + "@automation.com";
+        
         return new Object[][] {
                 {
-                        "sdhsghbncj",
-                        "nebngmnjuthbbnhncbyutyeojsnhjc@gmail.com",
-                        "ihugybciutfebnj@6739",
+                        "TestUser",
+                        uniqueEmail,
+                        "Passssswwwword@120983",
                         "17",
                         "May",
                         "2004",
-                        "sdhsj",
-                        "bhcjdkc",
-                        "cdcdcdjd",
-                        "cnhdsbgc cdhcbdsc",
-                        "xcmdshc jcjnd",
+                        "John",
+                        "Doe",
+                        "Test Company",
+                        "123 Test Street",
+                        "Apt 456",
                         "India",
                         "Delhi",
-                        "xnjsbhc",
-                        "771772",
-                        "999928782891"
+                        "New Delhi",
+                        "110001",
+                        "9999999999"
                 }
         };
     }
@@ -45,14 +48,14 @@ public class DataProviders {
     @DataProvider(name = "logoutUserData")
     public static Object[][] logoutUserData() {
         return new Object[][] {
-                {"hiramaadhav@gmail.com", "Maadhav@1608"}
+                {"pohosseweufei@yopmail.com", "pohosseweufei@yopmail.com"}
         };
     }
 
     @DataProvider(name = "registerExistingEmailData")
     public static Object[][] registerExistingEmailData() {
         return new Object[][] {
-                {"Maadhav", "maadhavhira@gmail.com"}
+                {"pohosseweufei@yopmail.com", "pohosseweufei@yopmail.com"}
         };
     }
 
@@ -61,7 +64,7 @@ public class DataProviders {
         return new Object[][] {
                 {
                         "Maadhav",
-                        "hiramaadhav@gmail.com",
+                        "pohosseweufei@yopmail.com",
                         "Wrong Product",
                         "The product is damaged and wrong product delivered",
                         "C:\\Users\\hp5cd\\Downloads\\Resume_Maadhav_Hira.pdf"
@@ -79,14 +82,14 @@ public class DataProviders {
     @DataProvider(name = "subscriptionHomeData")
     public static Object[][] subscriptionHomeData() {
         return new Object[][] {
-                {"home-subscribeeee@example.com"}
+                {"homesubscribeeee@example.com"}
         };
     }
 
     @DataProvider(name = "subscriptionCartData")
     public static Object[][] subscriptionCartData() {
         return new Object[][] {
-                {"cart-subscribe@example.com"}
+                {"cartsubscribe@example.com"}
         };
     }
 
@@ -115,14 +118,14 @@ public class DataProviders {
     @DataProvider(name = "searchVerifyCartAfterLoginData")
     public static Object[][] searchVerifyCartAfterLoginData() {
         return new Object[][] {
-                {"Shirt", "hiramaadhav@gmail.com", "Maadhav@1608"}
+                {"Shirt", "pohosseweufei@yopmail.com", "pohosseweufei@yopmail.com"}
         };
     }
 
     @DataProvider(name = "addReviewData")
     public static Object[][] addReviewData() {
         return new Object[][] {
-                {"Maadhav", "hiramaadhav@gmail.com", "Great product quality"}
+                {"Maadhav", "pohosseweufei@yopmail.com", "Great product quality"}
         };
     }
 
@@ -131,7 +134,7 @@ public class DataProviders {
         return new Object[][] {
                 {
                         "mogoproujuffou@yopmail.com",
-                        "Mmogoproujuffou@yopmail.com",
+                        "mogoproujuffou@yopmail.com",
                         "Maadhav",
                         "829201928281",
                         "817",

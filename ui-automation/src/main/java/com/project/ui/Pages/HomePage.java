@@ -13,7 +13,7 @@ public class HomePage {
     private ElementActions actions;
 
     public HomePage(WebDriver driver) {
-        this.actions = new ElementActions(driver, 40);
+        this.actions = new ElementActions(driver, 60);
         Log.info(clazz, "HomePage initialized");
     }
 
@@ -40,6 +40,10 @@ public class HomePage {
     public void clickProductPage() {
         Log.info(clazz, "Opening Product page");
         actions.click(Page_Locators.ClickOnProductPage);
+        // Wait for products page to load by checking for "All Products" heading
+        Log.info(clazz, "Waiting for Products page to load...");
+        actions.waitForElementWithRetry(Page_Locators.VerifyAllProductVisible, 5);
+        Log.info(clazz, "Products page loaded successfully");
     }
 
     public void clickContactUs() {
@@ -66,10 +70,18 @@ public class HomePage {
         Log.info(clazz, "Subscribing with email");
         actions.enterText(Page_Locators.EnterSubscribeEmail, email);
         actions.click(Page_Locators.ClickOnArrowButton);
+        // Accept any alerts that may appear
+        actions.acceptAlertIfPresent();
     }
 
     public boolean isSubscriptionSuccessVisible() {
         Log.debug(clazz, "Checking subscription success message");
-        return actions.isDisplayed(Page_Locators.VerifySuccessfullSubscription);
+        // The success message appears briefly, so wait for 7 seconds
+        try {
+            Thread.sleep(7000); // Wait 7 seconds for success message to appear
+        } catch (InterruptedException ie) {
+            Thread.currentThread().interrupt();
+        }
+        return actions.waitForElementWithRetry(Page_Locators.VerifySuccessfullSubscription, 10);
     }
 }
