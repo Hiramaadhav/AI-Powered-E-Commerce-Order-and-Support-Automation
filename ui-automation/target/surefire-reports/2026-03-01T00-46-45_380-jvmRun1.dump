@@ -1,0 +1,101 @@
+# Created at 2026-03-01T00:59:23.491
+Exiting self fork JVM. Received SHUTDOWN command from Maven shutdown hook.
+Thread dump before exiting the process (6004@LAPTOP-CDU0EB2F):
+"surefire-forkedjvm-command-thread" 
+   java.lang.Thread.State: RUNNABLE
+        at sun.management.ThreadImpl.getThreadInfo1(Native Method)
+        at sun.management.ThreadImpl.getThreadInfo(ThreadImpl.java:185)
+        at org.apache.maven.surefire.booter.ForkedBooter.generateThreadDump(ForkedBooter.java:579)
+        at org.apache.maven.surefire.booter.ForkedBooter.access$600(ForkedBooter.java:79)
+        at org.apache.maven.surefire.booter.ForkedBooter$4.update(ForkedBooter.java:315)
+        at org.apache.maven.surefire.booter.CommandReader$CommandRunnable.callListeners(CommandReader.java:357)
+        at org.apache.maven.surefire.booter.CommandReader$CommandRunnable.exitByConfiguration(CommandReader.java:367)
+        at org.apache.maven.surefire.booter.CommandReader$CommandRunnable.run(CommandReader.java:330)
+        at java.lang.Thread.run(Thread.java:750)
+
+"surefire-forkedjvm-stream-flusher" 
+   java.lang.Thread.State: TIMED_WAITING
+        at sun.misc.Unsafe.park(Native Method)
+        at java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:215)
+        at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.awaitNanos(AbstractQueuedSynchronizer.java:2078)
+        at java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:1093)
+        at java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:809)
+        at java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1074)
+        at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1134)
+        at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+        at java.lang.Thread.run(Thread.java:750)
+
+"Attach Listener" 
+   java.lang.Thread.State: RUNNABLE
+
+"Signal Dispatcher" 
+   java.lang.Thread.State: RUNNABLE
+
+"Finalizer" 
+   java.lang.Thread.State: WAITING
+        at java.lang.Object.wait(Native Method)
+        at java.lang.ref.ReferenceQueue.remove(ReferenceQueue.java:144)
+        at java.lang.ref.ReferenceQueue.remove(ReferenceQueue.java:165)
+        at java.lang.ref.Finalizer$FinalizerThread.run(Finalizer.java:188)
+
+"Reference Handler" 
+   java.lang.Thread.State: WAITING
+        at java.lang.Object.wait(Native Method)
+        at java.lang.Object.wait(Object.java:502)
+        at java.lang.ref.Reference.tryHandlePending(Reference.java:191)
+        at java.lang.ref.Reference$ReferenceHandler.run(Reference.java:153)
+
+"main" 
+   java.lang.Thread.State: RUNNABLE
+        at java.lang.ProcessImpl.waitForInterruptibly(Native Method)
+        at java.lang.ProcessImpl.waitFor(ProcessImpl.java:522)
+        at org.openqa.selenium.manager.SeleniumManager.runCommand(SeleniumManager.java:114)
+        at org.openqa.selenium.manager.SeleniumManager.getDriverPath(SeleniumManager.java:273)
+        at org.openqa.selenium.remote.service.DriverFinder.getPath(DriverFinder.java:22)
+        at org.openqa.selenium.remote.service.DriverFinder.getPath(DriverFinder.java:13)
+        at org.openqa.selenium.chrome.ChromeDriver.generateExecutor(ChromeDriver.java:99)
+        at org.openqa.selenium.chrome.ChromeDriver.<init>(ChromeDriver.java:88)
+        at org.openqa.selenium.chrome.ChromeDriver.<init>(ChromeDriver.java:83)
+        at org.openqa.selenium.chrome.ChromeDriver.<init>(ChromeDriver.java:72)
+        at com.project.ui.Base.DriverFactory.getDriver(DriverFactory.java:46)
+        at com.project.ui.Base.BaseTest.setUp(BaseTest.java:31)
+        at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+        at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+        at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+        at java.lang.reflect.Method.invoke(Method.java:498)
+        at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+        at org.testng.internal.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:62)
+        at org.testng.internal.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:385)
+        at org.testng.internal.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:321)
+        at org.testng.internal.TestInvoker.runConfigMethods(TestInvoker.java:700)
+        at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:527)
+        at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
+        at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+        at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
+        at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
+        at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+        at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+        at org.testng.TestRunner$$Lambda$152/1154821602.accept(Unknown Source)
+        at java.util.ArrayList.forEach(ArrayList.java:1259)
+        at org.testng.TestRunner.privateRun(TestRunner.java:794)
+        at org.testng.TestRunner.run(TestRunner.java:596)
+        at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
+        at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
+        at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
+        at org.testng.SuiteRunner.run(SuiteRunner.java:276)
+        at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+        at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+        at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
+        at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
+        at org.testng.TestNG.runSuites(TestNG.java:1063)
+        at org.testng.TestNG.run(TestNG.java:1031)
+        at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:308)
+        at org.apache.maven.surefire.testng.TestNGXmlTestSuite.execute(TestNGXmlTestSuite.java:71)
+        at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:113)
+        at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:385)
+        at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:162)
+        at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
+        at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
+
+
+

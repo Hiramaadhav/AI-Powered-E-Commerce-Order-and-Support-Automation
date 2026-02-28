@@ -1,0 +1,379 @@
+2026-03-01 00:44:38 INFO  com.project.ui.Base.BaseTest - ========== START TEST: testCase06_ContactUsForm ==========
+2026-03-01 00:44:38 INFO  com.project.ui.Base.BaseTest - Initializing WebDriver for test: testCase06_ContactUsForm
+2026-03-01 00:46:48 INFO  com.project.api.Base.APIBase - Setting up API Base configuration
+2026-03-01 00:46:48 INFO  com.project.api.Base.APIBase - ========== TEST 1: Get All Products List ==========
+2026-03-01 00:46:48 INFO  com.project.api.Base.APIBase - Performing GET request to: https://automationexercise.com/api/productsList
+2026-03-01 00:46:51 INFO  com.project.ai.api.performance.PerformanceAnomalyDetector - API Performance [getAllProducts]: 2638ms (Status: 200)
+2026-03-01 00:46:51 INFO  com.project.api.Base.APIBase - Verifying response status code...
+2026-03-01 00:46:51 INFO  com.project.ai.api.assertions.SmartAssertionEngine - ? Status code assertion passed: 200
+2026-03-01 00:46:51 INFO  com.project.ai.api.assertions.SmartAssertionEngine - ? Schema learned for endpoint: productsList
+2026-03-01 00:46:51 INFO  com.project.ai.api.assertions.SmartAssertionEngine - ? All fields validated successfully
+2026-03-01 00:46:51 INFO  com.project.ai.api.assertions.SmartAssertionEngine - ? No anomalies detected
+2026-03-01 00:46:51 WARN  com.project.ai.api.assertions.SmartAssertionEngine - ? Slow response for productsList: 2138ms (threshold: 2000ms)
+2026-03-01 00:46:51 INFO  com.project.api.utils.ResponseHandler - Response Body: {"responseCode": 200, "products": [{"id": 1, "name": "Blue Top", "price": "Rs. 500", "brand": "Polo", "category": {"usertype": {"usertype": "Women"}, "category": "Tops"}}, {"id": 2, "name": "Men Tshirt", "price": "Rs. 400", "brand": "H&M", "category": {"usertype": {"usertype": "Men"}, "category": "Tshirts"}}, {"id": 3, "name": "Sleeveless Dress", "price": "Rs. 1000", "brand": "Madame", "category": {"usertype": {"usertype": "Women"}, "category": "Dress"}}, {"id": 4, "name": "Stylish Dress", "price": "Rs. 1500", "brand": "Madame", "category": {"usertype": {"usertype": "Women"}, "category": "Dress"}}, {"id": 5, "name": "Winter Top", "price": "Rs. 600", "brand": "Mast & Harbour", "category": {"usertype": {"usertype": "Women"}, "category": "Tops"}}, {"id": 6, "name": "Summer White Top", "price": "Rs. 400", "brand": "H&M", "category": {"usertype": {"usertype": "Women"}, "category": "Tops"}}, {"id": 7, "name": "Madame Top For Women", "price": "Rs. 1000", "brand": "Madame", "category": {"usertype": {"usertype": "Women"}, "category": "Tops"}}, {"id": 8, "name": "Fancy Green Top", "price": "Rs. 700", "brand": "Polo", "category": {"usertype": {"usertype": "Women"}, "category": "Tops"}}, {"id": 11, "name": "Sleeves Printed Top - White", "price": "Rs. 499", "brand": "Babyhug", "category": {"usertype": {"usertype": "Kids"}, "category": "Tops & Shirts"}}, {"id": 12, "name": "Half Sleeves Top Schiffli Detailing - Pink", "price": "Rs. 359", "brand": "Babyhug", "category": {"usertype": {"usertype": "Kids"}, "category": "Tops & Shirts"}}, {"id": 13, "name": "Frozen Tops For Kids", "price": "Rs. 278", "brand": "Allen Solly Junior", "category": {"usertype": {"usertype": "Kids"}, "category": "Tops & Shirts"}}, {"id": 14, "name": "Full Sleeves Top Cherry - Pink", "price": "Rs. 679", "brand": "Kookie Kids", "category": {"usertype": {"usertype": "Kids"}, "category": "Tops & Shirts"}}, {"id": 15, "name": "Printed Off Shoulder Top - White", "price": "Rs. 315", "brand": "Babyhug", "category": {"usertype": {"usertype": "Kids"}, "category": "Tops & Shirts"}}, {"id": 16, "name": "Sleeves Top and Short - Blue & Pink", "price": "Rs. 478", "brand": "Babyhug", "category": {"usertype": {"usertype": "Kids"}, "category": "Dress"}}, {"id": 18, "name": "Little Girls Mr. Panda Shirt", "price": "Rs. 1200", "brand": "Kookie Kids", "category": {"usertype": {"usertype": "Kids"}, "category": "Tops & Shirts"}}, {"id": 19, "name": "Sleeveless Unicorn Patch Gown - Pink", "price": "Rs. 1050", "brand": "Allen Solly Junior", "category": {"usertype": {"usertype": "Kids"}, "category": "Dress"}}, {"id": 20, "name": "Cotton Mull Embroidered Dress", "price": "Rs. 1190", "brand": "Kookie Kids", "category": {"usertype": {"usertype": "Kids"}, "category": "Dress"}}, {"id": 21, "name": "Blue Cotton Indie Mickey Dress", "price": "Rs. 1530", "brand": "Biba", "category": {"usertype": {"usertype": "Kids"}, "category": "Dress"}}, {"id": 22, "name": "Long Maxi Tulle Fancy Dress Up Outfits -Pink", "price": "Rs. 1600", "brand": "Biba", "category": {"usertype": {"usertype": "Kids"}, "category": "Dress"}}, {"id": 23, "name": "Sleeveless Unicorn Print Fit & Flare Net Dress - Multi", "price": "Rs. 1100", "brand": "Biba", "category": {"usertype": {"usertype": "Kids"}, "category": "Dress"}}, {"id": 24, "name": "Colour Blocked Shirt \u2013 Sky Blue", "price": "Rs. 849", "brand": "Allen Solly Junior", "category": {"usertype": {"usertype": "Kids"}, "category": "Tops & Shirts"}}, {"id": 28, "name": "Pure Cotton V-Neck T-Shirt", "price": "Rs. 1299", "brand": "H&M", "category": {"usertype": {"usertype": "Men"}, "category": "Tshirts"}}, {"id": 29, "name": "Green Side Placket Detail T-Shirt", "price": "Rs. 1000", "brand": "Polo", "category": {"usertype": {"usertype": "Men"}, "category": "Tshirts"}}, {"id": 30, "name": "Premium Polo T-Shirts", "price": "Rs. 1500", "brand": "Polo", "category": {"usertype": {"usertype": "Men"}, "category": "Tshirts"}}, {"id": 31, "name": "Pure Cotton Neon Green Tshirt", "price": "Rs. 850", "brand": "H&M", "category": {"usertype": {"usertype": "Men"}, "category": "Tshirts"}}, {"id": 33, "name": "Soft Stretch Jeans", "price": "Rs. 799", "brand": "Polo", "category": {"usertype": {"usertype": "Men"}, "category": "Jeans"}}, {"id": 35, "name": "Regular Fit Straight Jeans", "price": "Rs. 1200", "brand": "H&M", "category": {"usertype": {"usertype": "Men"}, "category": "Jeans"}}, {"id": 37, "name": "Grunt Blue Slim Fit Jeans", "price": "Rs. 1400", "brand": "Polo", "category": {"usertype": {"usertype": "Men"}, "category": "Jeans"}}, {"id": 38, "name": "Rose Pink Embroidered Maxi Dress", "price": "Rs. 2300", "brand": "Madame", "category": {"usertype": {"usertype": "Women"}, "category": "Dress"}}, {"id": 39, "name": "Cotton Silk Hand Block Print Saree", "price": "Rs. 3000", "brand": "Biba", "category": {"usertype": {"usertype": "Women"}, "category": "Saree"}}, {"id": 40, "name": "Rust Red Linen Saree", "price": "Rs. 3500", "brand": "Biba", "category": {"usertype": {"usertype": "Women"}, "category": "Saree"}}, {"id": 41, "name": "Beautiful Peacock Blue Cotton Linen Saree", "price": "Rs. 5000", "brand": "Madame", "category": {"usertype": {"usertype": "Women"}, "category": "Saree"}}, {"id": 42, "name": "Lace Top For Women", "price": "Rs. 1400", "brand": "Mast & Harbour", "category": {"usertype": {"usertype": "Women"}, "category": "Tops"}}, {"id": 43, "name": "GRAPHIC DESIGN MEN T SHIRT - BLUE", "price": "Rs. 1389", "brand": "Mast & Harbour", "category": {"usertype": {"usertype": "Men"}, "category": "Tshirts"}}]}
+2026-03-01 00:46:51 INFO  com.project.api.utils.ResponseHandler - ============ RESPONSE DETAILS ============
+2026-03-01 00:46:51 INFO  com.project.api.utils.ResponseHandler - Status Code: 200
+2026-03-01 00:46:51 INFO  com.project.api.utils.ResponseHandler - Status Line: HTTP/1.1 200 OK
+2026-03-01 00:46:51 INFO  com.project.api.utils.ResponseHandler - Content Type: text/html; charset=utf-8
+2026-03-01 00:46:51 INFO  com.project.api.utils.ResponseHandler - Response Body: {"responseCode": 200, "products": [{"id": 1, "name": "Blue Top", "price": "Rs. 500", "brand": "Polo", "category": {"usertype": {"usertype": "Women"}, "category": "Tops"}}, {"id": 2, "name": "Men Tshirt", "price": "Rs. 400", "brand": "H&M", "category": {"usertype": {"usertype": "Men"}, "category": "Tshirts"}}, {"id": 3, "name": "Sleeveless Dress", "price": "Rs. 1000", "brand": "Madame", "category": {"usertype": {"usertype": "Women"}, "category": "Dress"}}, {"id": 4, "name": "Stylish Dress", "price": "Rs. 1500", "brand": "Madame", "category": {"usertype": {"usertype": "Women"}, "category": "Dress"}}, {"id": 5, "name": "Winter Top", "price": "Rs. 600", "brand": "Mast & Harbour", "category": {"usertype": {"usertype": "Women"}, "category": "Tops"}}, {"id": 6, "name": "Summer White Top", "price": "Rs. 400", "brand": "H&M", "category": {"usertype": {"usertype": "Women"}, "category": "Tops"}}, {"id": 7, "name": "Madame Top For Women", "price": "Rs. 1000", "brand": "Madame", "category": {"usertype": {"usertype": "Women"}, "category": "Tops"}}, {"id": 8, "name": "Fancy Green Top", "price": "Rs. 700", "brand": "Polo", "category": {"usertype": {"usertype": "Women"}, "category": "Tops"}}, {"id": 11, "name": "Sleeves Printed Top - White", "price": "Rs. 499", "brand": "Babyhug", "category": {"usertype": {"usertype": "Kids"}, "category": "Tops & Shirts"}}, {"id": 12, "name": "Half Sleeves Top Schiffli Detailing - Pink", "price": "Rs. 359", "brand": "Babyhug", "category": {"usertype": {"usertype": "Kids"}, "category": "Tops & Shirts"}}, {"id": 13, "name": "Frozen Tops For Kids", "price": "Rs. 278", "brand": "Allen Solly Junior", "category": {"usertype": {"usertype": "Kids"}, "category": "Tops & Shirts"}}, {"id": 14, "name": "Full Sleeves Top Cherry - Pink", "price": "Rs. 679", "brand": "Kookie Kids", "category": {"usertype": {"usertype": "Kids"}, "category": "Tops & Shirts"}}, {"id": 15, "name": "Printed Off Shoulder Top - White", "price": "Rs. 315", "brand": "Babyhug", "category": {"usertype": {"usertype": "Kids"}, "category": "Tops & Shirts"}}, {"id": 16, "name": "Sleeves Top and Short - Blue & Pink", "price": "Rs. 478", "brand": "Babyhug", "category": {"usertype": {"usertype": "Kids"}, "category": "Dress"}}, {"id": 18, "name": "Little Girls Mr. Panda Shirt", "price": "Rs. 1200", "brand": "Kookie Kids", "category": {"usertype": {"usertype": "Kids"}, "category": "Tops & Shirts"}}, {"id": 19, "name": "Sleeveless Unicorn Patch Gown - Pink", "price": "Rs. 1050", "brand": "Allen Solly Junior", "category": {"usertype": {"usertype": "Kids"}, "category": "Dress"}}, {"id": 20, "name": "Cotton Mull Embroidered Dress", "price": "Rs. 1190", "brand": "Kookie Kids", "category": {"usertype": {"usertype": "Kids"}, "category": "Dress"}}, {"id": 21, "name": "Blue Cotton Indie Mickey Dress", "price": "Rs. 1530", "brand": "Biba", "category": {"usertype": {"usertype": "Kids"}, "category": "Dress"}}, {"id": 22, "name": "Long Maxi Tulle Fancy Dress Up Outfits -Pink", "price": "Rs. 1600", "brand": "Biba", "category": {"usertype": {"usertype": "Kids"}, "category": "Dress"}}, {"id": 23, "name": "Sleeveless Unicorn Print Fit & Flare Net Dress - Multi", "price": "Rs. 1100", "brand": "Biba", "category": {"usertype": {"usertype": "Kids"}, "category": "Dress"}}, {"id": 24, "name": "Colour Blocked Shirt \u2013 Sky Blue", "price": "Rs. 849", "brand": "Allen Solly Junior", "category": {"usertype": {"usertype": "Kids"}, "category": "Tops & Shirts"}}, {"id": 28, "name": "Pure Cotton V-Neck T-Shirt", "price": "Rs. 1299", "brand": "H&M", "category": {"usertype": {"usertype": "Men"}, "category": "Tshirts"}}, {"id": 29, "name": "Green Side Placket Detail T-Shirt", "price": "Rs. 1000", "brand": "Polo", "category": {"usertype": {"usertype": "Men"}, "category": "Tshirts"}}, {"id": 30, "name": "Premium Polo T-Shirts", "price": "Rs. 1500", "brand": "Polo", "category": {"usertype": {"usertype": "Men"}, "category": "Tshirts"}}, {"id": 31, "name": "Pure Cotton Neon Green Tshirt", "price": "Rs. 850", "brand": "H&M", "category": {"usertype": {"usertype": "Men"}, "category": "Tshirts"}}, {"id": 33, "name": "Soft Stretch Jeans", "price": "Rs. 799", "brand": "Polo", "category": {"usertype": {"usertype": "Men"}, "category": "Jeans"}}, {"id": 35, "name": "Regular Fit Straight Jeans", "price": "Rs. 1200", "brand": "H&M", "category": {"usertype": {"usertype": "Men"}, "category": "Jeans"}}, {"id": 37, "name": "Grunt Blue Slim Fit Jeans", "price": "Rs. 1400", "brand": "Polo", "category": {"usertype": {"usertype": "Men"}, "category": "Jeans"}}, {"id": 38, "name": "Rose Pink Embroidered Maxi Dress", "price": "Rs. 2300", "brand": "Madame", "category": {"usertype": {"usertype": "Women"}, "category": "Dress"}}, {"id": 39, "name": "Cotton Silk Hand Block Print Saree", "price": "Rs. 3000", "brand": "Biba", "category": {"usertype": {"usertype": "Women"}, "category": "Saree"}}, {"id": 40, "name": "Rust Red Linen Saree", "price": "Rs. 3500", "brand": "Biba", "category": {"usertype": {"usertype": "Women"}, "category": "Saree"}}, {"id": 41, "name": "Beautiful Peacock Blue Cotton Linen Saree", "price": "Rs. 5000", "brand": "Madame", "category": {"usertype": {"usertype": "Women"}, "category": "Saree"}}, {"id": 42, "name": "Lace Top For Women", "price": "Rs. 1400", "brand": "Mast & Harbour", "category": {"usertype": {"usertype": "Women"}, "category": "Tops"}}, {"id": 43, "name": "GRAPHIC DESIGN MEN T SHIRT - BLUE", "price": "Rs. 1389", "brand": "Mast & Harbour", "category": {"usertype": {"usertype": "Men"}, "category": "Tshirts"}}]}
+2026-03-01 00:46:51 INFO  com.project.api.utils.ResponseHandler - =========================================
+2026-03-01 00:46:51 INFO  com.project.api.Base.APIBase - ? Test 1 PASSED: Get All Products List
+2026-03-01 00:46:51 INFO  com.project.api.Base.APIBase - ========== TEST 2: POST To All Products List ==========
+2026-03-01 00:46:51 INFO  com.project.api.Base.APIBase - Performing POST request to: https://automationexercise.com/api/productsList
+2026-03-01 00:46:53 INFO  com.project.ai.api.performance.PerformanceAnomalyDetector - API Performance [postAllProducts]: 1115ms (Status: 200)
+2026-03-01 00:46:53 INFO  com.project.api.Base.APIBase - Verifying response status code is 200...
+2026-03-01 00:46:53 INFO  com.project.ai.api.assertions.SmartAssertionEngine - ? Status code assertion passed: 200
+2026-03-01 00:46:53 INFO  com.project.ai.api.assertions.SmartAssertionEngine - ? Schema learned for endpoint: postProductsList
+2026-03-01 00:46:53 INFO  com.project.ai.api.assertions.SmartAssertionEngine - ? No anomalies detected
+2026-03-01 00:46:53 INFO  com.project.ai.api.assertions.SmartAssertionEngine - ? Response time OK: 1108ms
+2026-03-01 00:46:53 INFO  com.project.api.utils.ResponseHandler - ============ RESPONSE DETAILS ============
+2026-03-01 00:46:53 INFO  com.project.api.utils.ResponseHandler - Status Code: 200
+2026-03-01 00:46:53 INFO  com.project.api.utils.ResponseHandler - Status Line: HTTP/1.1 200 OK
+2026-03-01 00:46:53 INFO  com.project.api.utils.ResponseHandler - Content Type: text/html; charset=utf-8
+2026-03-01 00:46:53 INFO  com.project.api.utils.ResponseHandler - Response Body: {"responseCode": 405, "message": "This request method is not supported."}
+2026-03-01 00:46:53 INFO  com.project.api.utils.ResponseHandler - =========================================
+2026-03-01 00:46:53 INFO  com.project.api.Base.APIBase - ? Test 2 PASSED: POST To All Products List returns 200
+2026-03-01 00:46:53 INFO  com.project.api.Base.APIBase - ========== TEST 3: Get All Brands List ==========
+2026-03-01 00:46:53 INFO  com.project.api.Base.APIBase - Performing GET request to: https://automationexercise.com/api/brandsList
+2026-03-01 00:46:54 INFO  com.project.ai.api.performance.PerformanceAnomalyDetector - API Performance [getAllBrands]: 1097ms (Status: 200)
+2026-03-01 00:46:54 INFO  com.project.api.Base.APIBase - Verifying response status code...
+2026-03-01 00:46:54 INFO  com.project.ai.api.assertions.SmartAssertionEngine - ? Status code assertion passed: 200
+2026-03-01 00:46:54 INFO  com.project.ai.api.assertions.SmartAssertionEngine - ? Schema learned for endpoint: brandsList
+2026-03-01 00:46:54 INFO  com.project.ai.api.assertions.SmartAssertionEngine - ? All fields validated successfully
+2026-03-01 00:46:54 INFO  com.project.ai.api.assertions.SmartAssertionEngine - ? No anomalies detected
+2026-03-01 00:46:54 INFO  com.project.ai.api.assertions.SmartAssertionEngine - ? Response time OK: 1075ms
+2026-03-01 00:46:54 INFO  com.project.api.utils.ResponseHandler - Response Body: {"responseCode": 200, "brands": [{"id": 1, "brand": "Polo"}, {"id": 2, "brand": "H&M"}, {"id": 3, "brand": "Madame"}, {"id": 4, "brand": "Madame"}, {"id": 5, "brand": "Mast & Harbour"}, {"id": 6, "brand": "H&M"}, {"id": 7, "brand": "Madame"}, {"id": 8, "brand": "Polo"}, {"id": 11, "brand": "Babyhug"}, {"id": 12, "brand": "Babyhug"}, {"id": 13, "brand": "Allen Solly Junior"}, {"id": 14, "brand": "Kookie Kids"}, {"id": 15, "brand": "Babyhug"}, {"id": 16, "brand": "Babyhug"}, {"id": 18, "brand": "Kookie Kids"}, {"id": 19, "brand": "Allen Solly Junior"}, {"id": 20, "brand": "Kookie Kids"}, {"id": 21, "brand": "Biba"}, {"id": 22, "brand": "Biba"}, {"id": 23, "brand": "Biba"}, {"id": 24, "brand": "Allen Solly Junior"}, {"id": 28, "brand": "H&M"}, {"id": 29, "brand": "Polo"}, {"id": 30, "brand": "Polo"}, {"id": 31, "brand": "H&M"}, {"id": 33, "brand": "Polo"}, {"id": 35, "brand": "H&M"}, {"id": 37, "brand": "Polo"}, {"id": 38, "brand": "Madame"}, {"id": 39, "brand": "Biba"}, {"id": 40, "brand": "Biba"}, {"id": 41, "brand": "Madame"}, {"id": 42, "brand": "Mast & Harbour"}, {"id": 43, "brand": "Mast & Harbour"}]}
+2026-03-01 00:46:54 INFO  com.project.api.utils.ResponseHandler - ============ RESPONSE DETAILS ============
+2026-03-01 00:46:54 INFO  com.project.api.utils.ResponseHandler - Status Code: 200
+2026-03-01 00:46:54 INFO  com.project.api.utils.ResponseHandler - Status Line: HTTP/1.1 200 OK
+2026-03-01 00:46:54 INFO  com.project.api.utils.ResponseHandler - Content Type: text/html; charset=utf-8
+2026-03-01 00:46:54 INFO  com.project.api.utils.ResponseHandler - Response Body: {"responseCode": 200, "brands": [{"id": 1, "brand": "Polo"}, {"id": 2, "brand": "H&M"}, {"id": 3, "brand": "Madame"}, {"id": 4, "brand": "Madame"}, {"id": 5, "brand": "Mast & Harbour"}, {"id": 6, "brand": "H&M"}, {"id": 7, "brand": "Madame"}, {"id": 8, "brand": "Polo"}, {"id": 11, "brand": "Babyhug"}, {"id": 12, "brand": "Babyhug"}, {"id": 13, "brand": "Allen Solly Junior"}, {"id": 14, "brand": "Kookie Kids"}, {"id": 15, "brand": "Babyhug"}, {"id": 16, "brand": "Babyhug"}, {"id": 18, "brand": "Kookie Kids"}, {"id": 19, "brand": "Allen Solly Junior"}, {"id": 20, "brand": "Kookie Kids"}, {"id": 21, "brand": "Biba"}, {"id": 22, "brand": "Biba"}, {"id": 23, "brand": "Biba"}, {"id": 24, "brand": "Allen Solly Junior"}, {"id": 28, "brand": "H&M"}, {"id": 29, "brand": "Polo"}, {"id": 30, "brand": "Polo"}, {"id": 31, "brand": "H&M"}, {"id": 33, "brand": "Polo"}, {"id": 35, "brand": "H&M"}, {"id": 37, "brand": "Polo"}, {"id": 38, "brand": "Madame"}, {"id": 39, "brand": "Biba"}, {"id": 40, "brand": "Biba"}, {"id": 41, "brand": "Madame"}, {"id": 42, "brand": "Mast & Harbour"}, {"id": 43, "brand": "Mast & Harbour"}]}
+2026-03-01 00:46:54 INFO  com.project.api.utils.ResponseHandler - =========================================
+2026-03-01 00:46:54 INFO  com.project.api.Base.APIBase - ? Test 3 PASSED: Get All Brands List
+2026-03-01 00:46:54 INFO  com.project.api.Base.APIBase - ========== TEST 4: PUT To All Brands List ==========
+2026-03-01 00:46:54 INFO  com.project.api.Base.APIBase - Performing PUT request to: https://automationexercise.com/api/brandsList
+2026-03-01 00:46:55 INFO  com.project.ai.api.performance.PerformanceAnomalyDetector - API Performance [putAllBrands]: 1119ms (Status: 200)
+2026-03-01 00:46:55 INFO  com.project.api.Base.APIBase - Verifying response status code is 200...
+2026-03-01 00:46:55 INFO  com.project.ai.api.assertions.SmartAssertionEngine - ? Status code assertion passed: 200
+2026-03-01 00:46:55 INFO  com.project.ai.api.assertions.SmartAssertionEngine - ? Schema learned for endpoint: putBrandsList
+2026-03-01 00:46:55 INFO  com.project.ai.api.assertions.SmartAssertionEngine - ? No anomalies detected
+2026-03-01 00:46:55 INFO  com.project.ai.api.assertions.SmartAssertionEngine - ? Response time OK: 1109ms
+2026-03-01 00:46:55 INFO  com.project.api.utils.ResponseHandler - ============ RESPONSE DETAILS ============
+2026-03-01 00:46:55 INFO  com.project.api.utils.ResponseHandler - Status Code: 200
+2026-03-01 00:46:55 INFO  com.project.api.utils.ResponseHandler - Status Line: HTTP/1.1 200 OK
+2026-03-01 00:46:55 INFO  com.project.api.utils.ResponseHandler - Content Type: text/html; charset=utf-8
+2026-03-01 00:46:55 INFO  com.project.api.utils.ResponseHandler - Response Body: {"responseCode": 405, "message": "This request method is not supported."}
+2026-03-01 00:46:55 INFO  com.project.api.utils.ResponseHandler - =========================================
+2026-03-01 00:46:55 INFO  com.project.api.Base.APIBase - ? Test 4 PASSED: PUT To All Brands List returns 200
+2026-03-01 00:46:55 INFO  com.project.api.Base.APIBase - ========== TEST 5: Search Product With Parameter ==========
+2026-03-01 00:46:55 INFO  com.project.api.Base.APIBase - Performing POST request to: https://automationexercise.com/api/searchProduct
+2026-03-01 00:46:56 INFO  com.project.ai.api.performance.PerformanceAnomalyDetector - API Performance [searchProduct]: 1146ms (Status: 200)
+2026-03-01 00:46:56 INFO  com.project.api.Base.APIBase - Verifying response status code...
+2026-03-01 00:46:56 INFO  com.project.ai.api.assertions.SmartAssertionEngine - ? Status code assertion passed: 200
+2026-03-01 00:46:56 INFO  com.project.ai.api.assertions.SmartAssertionEngine - ? Schema learned for endpoint: searchProduct
+2026-03-01 00:46:56 INFO  com.project.ai.api.assertions.SmartAssertionEngine - ? All fields validated successfully
+2026-03-01 00:46:56 INFO  com.project.ai.api.assertions.SmartAssertionEngine - ? No anomalies detected
+2026-03-01 00:46:56 INFO  com.project.ai.api.assertions.SmartAssertionEngine - ? Response time OK: 1136ms
+2026-03-01 00:46:56 INFO  com.project.api.utils.ResponseHandler - Response Body: {"responseCode": 200, "products": [{"id": 1, "name": "Blue Top", "price": "Rs. 500", "brand": "Polo", "category": {"usertype": {"usertype": "Women"}, "category": "Tops"}}, {"id": 5, "name": "Winter Top", "price": "Rs. 600", "brand": "Mast & Harbour", "category": {"usertype": {"usertype": "Women"}, "category": "Tops"}}, {"id": 6, "name": "Summer White Top", "price": "Rs. 400", "brand": "H&M", "category": {"usertype": {"usertype": "Women"}, "category": "Tops"}}, {"id": 7, "name": "Madame Top For Women", "price": "Rs. 1000", "brand": "Madame", "category": {"usertype": {"usertype": "Women"}, "category": "Tops"}}, {"id": 8, "name": "Fancy Green Top", "price": "Rs. 700", "brand": "Polo", "category": {"usertype": {"usertype": "Women"}, "category": "Tops"}}, {"id": 11, "name": "Sleeves Printed Top - White", "price": "Rs. 499", "brand": "Babyhug", "category": {"usertype": {"usertype": "Kids"}, "category": "Tops & Shirts"}}, {"id": 12, "name": "Half Sleeves Top Schiffli Detailing - Pink", "price": "Rs. 359", "brand": "Babyhug", "category": {"usertype": {"usertype": "Kids"}, "category": "Tops & Shirts"}}, {"id": 13, "name": "Frozen Tops For Kids", "price": "Rs. 278", "brand": "Allen Solly Junior", "category": {"usertype": {"usertype": "Kids"}, "category": "Tops & Shirts"}}, {"id": 14, "name": "Full Sleeves Top Cherry - Pink", "price": "Rs. 679", "brand": "Kookie Kids", "category": {"usertype": {"usertype": "Kids"}, "category": "Tops & Shirts"}}, {"id": 15, "name": "Printed Off Shoulder Top - White", "price": "Rs. 315", "brand": "Babyhug", "category": {"usertype": {"usertype": "Kids"}, "category": "Tops & Shirts"}}, {"id": 16, "name": "Sleeves Top and Short - Blue & Pink", "price": "Rs. 478", "brand": "Babyhug", "category": {"usertype": {"usertype": "Kids"}, "category": "Dress"}}, {"id": 18, "name": "Little Girls Mr. Panda Shirt", "price": "Rs. 1200", "brand": "Kookie Kids", "category": {"usertype": {"usertype": "Kids"}, "category": "Tops & Shirts"}}, {"id": 24, "name": "Colour Blocked Shirt \u2013 Sky Blue", "price": "Rs. 849", "brand": "Allen Solly Junior", "category": {"usertype": {"usertype": "Kids"}, "category": "Tops & Shirts"}}, {"id": 42, "name": "Lace Top For Women", "price": "Rs. 1400", "brand": "Mast & Harbour", "category": {"usertype": {"usertype": "Women"}, "category": "Tops"}}]}
+2026-03-01 00:46:56 INFO  com.project.api.utils.ResponseHandler - ============ RESPONSE DETAILS ============
+2026-03-01 00:46:56 INFO  com.project.api.utils.ResponseHandler - Status Code: 200
+2026-03-01 00:46:56 INFO  com.project.api.utils.ResponseHandler - Status Line: HTTP/1.1 200 OK
+2026-03-01 00:46:56 INFO  com.project.api.utils.ResponseHandler - Content Type: text/html; charset=utf-8
+2026-03-01 00:46:56 INFO  com.project.api.utils.ResponseHandler - Response Body: {"responseCode": 200, "products": [{"id": 1, "name": "Blue Top", "price": "Rs. 500", "brand": "Polo", "category": {"usertype": {"usertype": "Women"}, "category": "Tops"}}, {"id": 5, "name": "Winter Top", "price": "Rs. 600", "brand": "Mast & Harbour", "category": {"usertype": {"usertype": "Women"}, "category": "Tops"}}, {"id": 6, "name": "Summer White Top", "price": "Rs. 400", "brand": "H&M", "category": {"usertype": {"usertype": "Women"}, "category": "Tops"}}, {"id": 7, "name": "Madame Top For Women", "price": "Rs. 1000", "brand": "Madame", "category": {"usertype": {"usertype": "Women"}, "category": "Tops"}}, {"id": 8, "name": "Fancy Green Top", "price": "Rs. 700", "brand": "Polo", "category": {"usertype": {"usertype": "Women"}, "category": "Tops"}}, {"id": 11, "name": "Sleeves Printed Top - White", "price": "Rs. 499", "brand": "Babyhug", "category": {"usertype": {"usertype": "Kids"}, "category": "Tops & Shirts"}}, {"id": 12, "name": "Half Sleeves Top Schiffli Detailing - Pink", "price": "Rs. 359", "brand": "Babyhug", "category": {"usertype": {"usertype": "Kids"}, "category": "Tops & Shirts"}}, {"id": 13, "name": "Frozen Tops For Kids", "price": "Rs. 278", "brand": "Allen Solly Junior", "category": {"usertype": {"usertype": "Kids"}, "category": "Tops & Shirts"}}, {"id": 14, "name": "Full Sleeves Top Cherry - Pink", "price": "Rs. 679", "brand": "Kookie Kids", "category": {"usertype": {"usertype": "Kids"}, "category": "Tops & Shirts"}}, {"id": 15, "name": "Printed Off Shoulder Top - White", "price": "Rs. 315", "brand": "Babyhug", "category": {"usertype": {"usertype": "Kids"}, "category": "Tops & Shirts"}}, {"id": 16, "name": "Sleeves Top and Short - Blue & Pink", "price": "Rs. 478", "brand": "Babyhug", "category": {"usertype": {"usertype": "Kids"}, "category": "Dress"}}, {"id": 18, "name": "Little Girls Mr. Panda Shirt", "price": "Rs. 1200", "brand": "Kookie Kids", "category": {"usertype": {"usertype": "Kids"}, "category": "Tops & Shirts"}}, {"id": 24, "name": "Colour Blocked Shirt \u2013 Sky Blue", "price": "Rs. 849", "brand": "Allen Solly Junior", "category": {"usertype": {"usertype": "Kids"}, "category": "Tops & Shirts"}}, {"id": 42, "name": "Lace Top For Women", "price": "Rs. 1400", "brand": "Mast & Harbour", "category": {"usertype": {"usertype": "Women"}, "category": "Tops"}}]}
+2026-03-01 00:46:56 INFO  com.project.api.utils.ResponseHandler - =========================================
+2026-03-01 00:46:56 INFO  com.project.api.Base.APIBase - ? Test 5 PASSED: Search Product With Parameter
+2026-03-01 00:46:56 INFO  com.project.api.Base.APIBase - ========== TEST 6: Search Product Without Parameter ==========
+2026-03-01 00:46:56 INFO  com.project.api.Base.APIBase - Performing POST request to: https://automationexercise.com/api/searchProduct
+2026-03-01 00:46:56 INFO  com.project.ai.api.performance.PerformanceAnomalyDetector - API Performance [searchProductNoParam]: 467ms (Status: 200)
+2026-03-01 00:46:56 INFO  com.project.api.Base.APIBase - Verifying response status code is 200...
+2026-03-01 00:46:56 INFO  com.project.ai.api.assertions.SmartAssertionEngine - ? Status code assertion passed: 200
+2026-03-01 00:46:56 INFO  com.project.ai.api.assertions.SmartAssertionEngine - ? Schema learned for endpoint: searchProductNoParam
+2026-03-01 00:46:56 INFO  com.project.ai.api.assertions.SmartAssertionEngine - ? No anomalies detected
+2026-03-01 00:46:56 INFO  com.project.ai.api.assertions.SmartAssertionEngine - ? Response time OK: 459ms
+2026-03-01 00:46:56 INFO  com.project.api.utils.ResponseHandler - ============ RESPONSE DETAILS ============
+2026-03-01 00:46:56 INFO  com.project.api.utils.ResponseHandler - Status Code: 200
+2026-03-01 00:46:56 INFO  com.project.api.utils.ResponseHandler - Status Line: HTTP/1.1 200 OK
+2026-03-01 00:46:56 INFO  com.project.api.utils.ResponseHandler - Content Type: text/html; charset=utf-8
+2026-03-01 00:46:56 INFO  com.project.api.utils.ResponseHandler - Response Body: {"responseCode": 400, "message": "Bad request, search_product parameter is missing in POST request."}
+2026-03-01 00:46:56 INFO  com.project.api.utils.ResponseHandler - =========================================
+2026-03-01 00:46:56 INFO  com.project.api.Base.APIBase - ? Test 6 PASSED: Search Product Without Parameter returns 200
+2026-03-01 00:46:56 INFO  com.project.api.Base.APIBase - ========== TEST 7: Verify Login With Valid Details ==========
+2026-03-01 00:46:56 INFO  com.project.api.Base.APIBase - Performing POST request to: https://automationexercise.com/api/verifyLogin
+2026-03-01 00:46:57 INFO  com.project.ai.api.performance.PerformanceAnomalyDetector - API Performance [verifyLogin]: 463ms (Status: 200)
+2026-03-01 00:46:57 INFO  com.project.api.Base.APIBase - Verifying response status code...
+2026-03-01 00:46:57 INFO  com.project.ai.api.assertions.SmartAssertionEngine - ? Status code assertion passed: 200
+2026-03-01 00:46:57 INFO  com.project.ai.api.assertions.SmartAssertionEngine - ? Schema learned for endpoint: userLogin
+2026-03-01 00:46:57 INFO  com.project.ai.api.assertions.SmartAssertionEngine - ? All fields validated successfully
+2026-03-01 00:46:57 INFO  com.project.ai.api.assertions.SmartAssertionEngine - ? No anomalies detected
+2026-03-01 00:46:57 INFO  com.project.ai.api.assertions.SmartAssertionEngine - ? Response time OK: 454ms
+2026-03-01 00:46:57 INFO  com.project.api.utils.ResponseHandler - ============ RESPONSE DETAILS ============
+2026-03-01 00:46:57 INFO  com.project.api.utils.ResponseHandler - Status Code: 200
+2026-03-01 00:46:57 INFO  com.project.api.utils.ResponseHandler - Status Line: HTTP/1.1 200 OK
+2026-03-01 00:46:57 INFO  com.project.api.utils.ResponseHandler - Content Type: text/html; charset=utf-8
+2026-03-01 00:46:57 INFO  com.project.api.utils.ResponseHandler - Response Body: {"responseCode": 404, "message": "User not found!"}
+2026-03-01 00:46:57 INFO  com.project.api.utils.ResponseHandler - =========================================
+2026-03-01 00:46:57 INFO  com.project.api.Base.APIBase - ? Test 7 PASSED: Verify Login With Valid Details
+2026-03-01 00:46:57 INFO  com.project.api.Base.APIBase - ========== TEST 8: Verify Login Without Email Parameter ==========
+2026-03-01 00:46:57 INFO  com.project.api.Base.APIBase - Performing POST request to: https://automationexercise.com/api/verifyLogin
+2026-03-01 00:46:58 INFO  com.project.ai.api.performance.PerformanceAnomalyDetector - API Performance [verifyLoginNoEmail]: 1073ms (Status: 200)
+2026-03-01 00:46:58 INFO  com.project.api.Base.APIBase - Verifying response status code is 200...
+2026-03-01 00:46:58 INFO  com.project.ai.api.assertions.SmartAssertionEngine - ? Status code assertion passed: 200
+2026-03-01 00:46:58 INFO  com.project.ai.api.assertions.SmartAssertionEngine - ? Schema learned for endpoint: verifyLoginNoEmail
+2026-03-01 00:46:58 INFO  com.project.ai.api.assertions.SmartAssertionEngine - ? No anomalies detected
+2026-03-01 00:46:58 WARN  com.project.ai.api.assertions.SmartAssertionEngine - ? Slow response for verifyLoginNoEmail: 1073ms (threshold: 1000ms)
+2026-03-01 00:46:58 INFO  com.project.api.utils.ResponseHandler - ============ RESPONSE DETAILS ============
+2026-03-01 00:46:58 INFO  com.project.api.utils.ResponseHandler - Status Code: 200
+2026-03-01 00:46:58 INFO  com.project.api.utils.ResponseHandler - Status Line: HTTP/1.1 200 OK
+2026-03-01 00:46:58 INFO  com.project.api.utils.ResponseHandler - Content Type: text/html; charset=utf-8
+2026-03-01 00:46:58 INFO  com.project.api.utils.ResponseHandler - Response Body: {"responseCode": 400, "message": "Bad request, email or password parameter is missing in POST request."}
+2026-03-01 00:46:58 INFO  com.project.api.utils.ResponseHandler - =========================================
+2026-03-01 00:46:58 INFO  com.project.api.Base.APIBase - ? Test 8 PASSED: Verify Login Without Email Parameter returns 200
+2026-03-01 00:46:58 INFO  com.project.api.Base.APIBase - ========== TEST 9: DELETE Verify Login ==========
+2026-03-01 00:46:58 INFO  com.project.api.Base.APIBase - Performing DELETE request to: https://automationexercise.com/api/verifyLogin
+2026-03-01 00:46:59 INFO  com.project.ai.api.performance.PerformanceAnomalyDetector - API Performance [deleteVerifyLogin]: 498ms (Status: 200)
+2026-03-01 00:46:59 INFO  com.project.api.Base.APIBase - Verifying response status code is 200...
+2026-03-01 00:46:59 INFO  com.project.ai.api.assertions.SmartAssertionEngine - ? Status code assertion passed: 200
+2026-03-01 00:46:59 INFO  com.project.ai.api.assertions.SmartAssertionEngine - ? Schema learned for endpoint: deleteVerifyLogin
+2026-03-01 00:46:59 INFO  com.project.ai.api.assertions.SmartAssertionEngine - ? No anomalies detected
+2026-03-01 00:46:59 INFO  com.project.ai.api.assertions.SmartAssertionEngine - ? Response time OK: 490ms
+2026-03-01 00:46:59 INFO  com.project.api.utils.ResponseHandler - ============ RESPONSE DETAILS ============
+2026-03-01 00:46:59 INFO  com.project.api.utils.ResponseHandler - Status Code: 200
+2026-03-01 00:46:59 INFO  com.project.api.utils.ResponseHandler - Status Line: HTTP/1.1 200 OK
+2026-03-01 00:46:59 INFO  com.project.api.utils.ResponseHandler - Content Type: text/html; charset=utf-8
+2026-03-01 00:46:59 INFO  com.project.api.utils.ResponseHandler - Response Body: {"responseCode": 405, "message": "This request method is not supported."}
+2026-03-01 00:46:59 INFO  com.project.api.utils.ResponseHandler - =========================================
+2026-03-01 00:46:59 INFO  com.project.api.Base.APIBase - ? Test 9 PASSED: DELETE Verify Login returns 200
+2026-03-01 00:46:59 INFO  com.project.api.Base.APIBase - ========== TEST 10: Verify Login With Invalid Details ==========
+2026-03-01 00:46:59 INFO  com.project.api.Base.APIBase - Performing POST request to: https://automationexercise.com/api/verifyLogin
+2026-03-01 00:47:00 INFO  com.project.ai.api.performance.PerformanceAnomalyDetector - API Performance [loginInvalid]: 1142ms (Status: 200)
+2026-03-01 00:47:00 INFO  com.project.api.Base.APIBase - Verifying response status code is 200...
+2026-03-01 00:47:00 INFO  com.project.ai.api.assertions.SmartAssertionEngine - ? Status code assertion passed: 200
+2026-03-01 00:47:00 INFO  com.project.ai.api.assertions.SmartAssertionEngine - ? Schema learned for endpoint: loginInvalid
+2026-03-01 00:47:00 INFO  com.project.ai.api.assertions.SmartAssertionEngine - ? No anomalies detected
+2026-03-01 00:47:00 WARN  com.project.ai.api.assertions.SmartAssertionEngine - ? Slow response for loginInvalid: 1136ms (threshold: 1000ms)
+2026-03-01 00:47:00 INFO  com.project.api.utils.ResponseHandler - ============ RESPONSE DETAILS ============
+2026-03-01 00:47:00 INFO  com.project.api.utils.ResponseHandler - Status Code: 200
+2026-03-01 00:47:00 INFO  com.project.api.utils.ResponseHandler - Status Line: HTTP/1.1 200 OK
+2026-03-01 00:47:00 INFO  com.project.api.utils.ResponseHandler - Content Type: text/html; charset=utf-8
+2026-03-01 00:47:00 INFO  com.project.api.utils.ResponseHandler - Response Body: {"responseCode": 404, "message": "User not found!"}
+2026-03-01 00:47:00 INFO  com.project.api.utils.ResponseHandler - =========================================
+2026-03-01 00:47:00 INFO  com.project.api.Base.APIBase - ? Test 10 PASSED: Verify Login With Invalid Details returns 200
+2026-03-01 00:47:00 INFO  com.project.api.Base.APIBase - ========== TEST 11: Create User Account ==========
+2026-03-01 00:47:00 INFO  com.project.api.Base.APIBase - Performing POST request to: https://automationexercise.com/api/createAccount
+2026-03-01 00:47:01 INFO  com.project.ai.api.performance.PerformanceAnomalyDetector - API Performance [createAccount]: 1087ms (Status: 200)
+2026-03-01 00:47:01 INFO  com.project.api.Base.APIBase - Verifying response status code...
+2026-03-01 00:47:01 INFO  com.project.ai.api.assertions.SmartAssertionEngine - ? Status code assertion passed: 200
+2026-03-01 00:47:01 INFO  com.project.ai.api.assertions.SmartAssertionEngine - ? Schema learned for endpoint: createAccount
+2026-03-01 00:47:01 INFO  com.project.ai.api.assertions.SmartAssertionEngine - ? All fields validated successfully
+2026-03-01 00:47:01 INFO  com.project.ai.api.assertions.SmartAssertionEngine - Ignoring dynamic fields: user.id, user.created_at, user.token
+2026-03-01 00:47:01 INFO  com.project.ai.api.assertions.SmartAssertionEngine - ? No anomalies detected
+2026-03-01 00:47:01 INFO  com.project.ai.api.assertions.SmartAssertionEngine - ? Response time OK: 1078ms
+2026-03-01 00:47:01 INFO  com.project.api.utils.ResponseHandler - ============ RESPONSE DETAILS ============
+2026-03-01 00:47:01 INFO  com.project.api.utils.ResponseHandler - Status Code: 200
+2026-03-01 00:47:01 INFO  com.project.api.utils.ResponseHandler - Status Line: HTTP/1.1 200 OK
+2026-03-01 00:47:01 INFO  com.project.api.utils.ResponseHandler - Content Type: text/html; charset=utf-8
+2026-03-01 00:47:01 INFO  com.project.api.utils.ResponseHandler - Response Body: {"responseCode": 201, "message": "User created!"}
+2026-03-01 00:47:01 INFO  com.project.api.utils.ResponseHandler - =========================================
+2026-03-01 00:47:01 INFO  com.project.api.Base.APIBase - ? Test 11 PASSED: Create User Account returns 200
+2026-03-01 00:47:01 INFO  com.project.api.Base.APIBase - ========== TEST 12: Delete User Account ==========
+2026-03-01 00:47:01 INFO  com.project.api.Base.APIBase - Performing POST request to: https://automationexercise.com/api/createAccount
+2026-03-01 00:47:02 INFO  com.project.api.Base.APIBase - Performing DELETE request to: https://automationexercise.com/api/deleteAccount
+2026-03-01 00:47:03 INFO  com.project.ai.api.performance.PerformanceAnomalyDetector - API Performance [deleteAccount]: 1036ms (Status: 200)
+2026-03-01 00:47:03 INFO  com.project.api.Base.APIBase - Verifying response status code...
+2026-03-01 00:47:03 INFO  com.project.ai.api.assertions.SmartAssertionEngine - ? Status code assertion passed: 200
+2026-03-01 00:47:03 INFO  com.project.ai.api.assertions.SmartAssertionEngine - ? Schema learned for endpoint: deleteAccount
+2026-03-01 00:47:03 INFO  com.project.ai.api.assertions.SmartAssertionEngine - ? All fields validated successfully
+2026-03-01 00:47:03 INFO  com.project.ai.api.assertions.SmartAssertionEngine - ? No anomalies detected
+2026-03-01 00:47:03 INFO  com.project.ai.api.assertions.SmartAssertionEngine - ? Response time OK: 1018ms
+2026-03-01 00:47:03 INFO  com.project.api.utils.ResponseHandler - Response Body: {"responseCode": 200, "message": "Account deleted!"}
+2026-03-01 00:47:03 INFO  com.project.api.utils.ResponseHandler - ============ RESPONSE DETAILS ============
+2026-03-01 00:47:03 INFO  com.project.api.utils.ResponseHandler - Status Code: 200
+2026-03-01 00:47:03 INFO  com.project.api.utils.ResponseHandler - Status Line: HTTP/1.1 200 OK
+2026-03-01 00:47:03 INFO  com.project.api.utils.ResponseHandler - Content Type: text/html; charset=utf-8
+2026-03-01 00:47:03 INFO  com.project.api.utils.ResponseHandler - Response Body: {"responseCode": 200, "message": "Account deleted!"}
+2026-03-01 00:47:03 INFO  com.project.api.utils.ResponseHandler - =========================================
+2026-03-01 00:47:03 INFO  com.project.api.Base.APIBase - ? Test 12 PASSED: Delete User Account returns 200
+2026-03-01 00:47:03 INFO  com.project.api.Base.APIBase - ========== TEST 13: Update User Account ==========
+2026-03-01 00:47:03 INFO  com.project.api.Base.APIBase - Performing POST request to: https://automationexercise.com/api/createAccount
+2026-03-01 00:47:04 INFO  com.project.api.Base.APIBase - Performing PUT request to: https://automationexercise.com/api/updateAccount
+2026-03-01 00:47:05 INFO  com.project.ai.api.performance.PerformanceAnomalyDetector - API Performance [updateAccount]: 1139ms (Status: 200)
+2026-03-01 00:47:05 INFO  com.project.api.Base.APIBase - Verifying response status code...
+2026-03-01 00:47:05 INFO  com.project.ai.api.assertions.SmartAssertionEngine - ? Status code assertion passed: 200
+2026-03-01 00:47:05 INFO  com.project.ai.api.assertions.SmartAssertionEngine - ? Schema learned for endpoint: updateAccount
+2026-03-01 00:47:05 INFO  com.project.ai.api.assertions.SmartAssertionEngine - ? All fields validated successfully
+2026-03-01 00:47:05 INFO  com.project.ai.api.assertions.SmartAssertionEngine - ? No anomalies detected
+2026-03-01 00:47:05 INFO  com.project.ai.api.assertions.SmartAssertionEngine - ? Response time OK: 1126ms
+2026-03-01 00:47:05 INFO  com.project.api.utils.ResponseHandler - Response Body: {"responseCode": 200, "message": "User updated!"}
+2026-03-01 00:47:05 INFO  com.project.api.utils.ResponseHandler - ============ RESPONSE DETAILS ============
+2026-03-01 00:47:05 INFO  com.project.api.utils.ResponseHandler - Status Code: 200
+2026-03-01 00:47:05 INFO  com.project.api.utils.ResponseHandler - Status Line: HTTP/1.1 200 OK
+2026-03-01 00:47:05 INFO  com.project.api.utils.ResponseHandler - Content Type: text/html; charset=utf-8
+2026-03-01 00:47:05 INFO  com.project.api.utils.ResponseHandler - Response Body: {"responseCode": 200, "message": "User updated!"}
+2026-03-01 00:47:05 INFO  com.project.api.utils.ResponseHandler - =========================================
+2026-03-01 00:47:05 INFO  com.project.api.Base.APIBase - ? Test 13 PASSED: Update User Account returns 200
+2026-03-01 00:47:05 INFO  com.project.api.Base.APIBase - ========== TEST 14: Get User Detail By Email ==========
+2026-03-01 00:47:05 INFO  com.project.api.Base.APIBase - Performing POST request to: https://automationexercise.com/api/createAccount
+2026-03-01 00:47:06 INFO  com.project.api.Base.APIBase - Performing GET request to: https://automationexercise.com/api/getUserDetailByEmail with params
+2026-03-01 00:47:07 INFO  com.project.ai.api.performance.PerformanceAnomalyDetector - API Performance [getUserDetail]: 1102ms (Status: 200)
+2026-03-01 00:47:07 INFO  com.project.api.Base.APIBase - Verifying response status code...
+2026-03-01 00:47:07 INFO  com.project.ai.api.assertions.SmartAssertionEngine - ? Status code assertion passed: 200
+2026-03-01 00:47:07 INFO  com.project.ai.api.assertions.SmartAssertionEngine - ? Schema learned for endpoint: userAccount
+2026-03-01 00:47:07 INFO  com.project.ai.api.assertions.SmartAssertionEngine - ? All fields validated successfully
+2026-03-01 00:47:07 INFO  com.project.ai.api.assertions.SmartAssertionEngine - ? No anomalies detected
+2026-03-01 00:47:07 INFO  com.project.ai.api.assertions.SmartAssertionEngine - ? Response time OK: 1087ms
+2026-03-01 00:47:07 INFO  com.project.api.utils.ResponseHandler - Response Body: {"responseCode": 200, "user": {"id": 1418352, "name": "Test User", "email": "getdetail1772306225663@example.com", "title": "Mr", "birth_day": "15", "birth_month": "6", "birth_year": "1990", "first_name": "Test", "last_name": "User", "company": "Test Company", "address1": "123 Test Street", "address2": "Apt 4B", "country": "United States", "state": "California", "city": "San Francisco", "zipcode": "94102"}}
+2026-03-01 00:47:07 INFO  com.project.api.utils.ResponseHandler - ============ RESPONSE DETAILS ============
+2026-03-01 00:47:07 INFO  com.project.api.utils.ResponseHandler - Status Code: 200
+2026-03-01 00:47:07 INFO  com.project.api.utils.ResponseHandler - Status Line: HTTP/1.1 200 OK
+2026-03-01 00:47:07 INFO  com.project.api.utils.ResponseHandler - Content Type: text/html; charset=utf-8
+2026-03-01 00:47:07 INFO  com.project.api.utils.ResponseHandler - Response Body: {"responseCode": 200, "user": {"id": 1418352, "name": "Test User", "email": "getdetail1772306225663@example.com", "title": "Mr", "birth_day": "15", "birth_month": "6", "birth_year": "1990", "first_name": "Test", "last_name": "User", "company": "Test Company", "address1": "123 Test Street", "address2": "Apt 4B", "country": "United States", "state": "California", "city": "San Francisco", "zipcode": "94102"}}
+2026-03-01 00:47:07 INFO  com.project.api.utils.ResponseHandler - =========================================
+2026-03-01 00:47:07 INFO  com.project.api.Base.APIBase - ? Test 14 PASSED: Get User Detail By Email returns 200
+2026-03-01 00:47:07 INFO  com.project.ai.api.performance.PerformanceAnomalyDetector - 
+================================================================================
+2026-03-01 00:47:07 INFO  com.project.ai.api.performance.PerformanceAnomalyDetector - API PERFORMANCE REPORT
+2026-03-01 00:47:07 INFO  com.project.ai.api.performance.PerformanceAnomalyDetector - ================================================================================
+2026-03-01 00:47:07 INFO  com.project.ai.api.performance.PerformanceAnomalyDetector - 
+[verifyLogin]
+  Samples: 1
+  Mean: 463ms
+  Median: 463ms
+  95th percentile: 463ms
+  99th percentile: 463ms
+  Min: 463ms
+  Max: 463ms
+  Anomalies: 0
+2026-03-01 00:47:07 INFO  com.project.ai.api.performance.PerformanceAnomalyDetector - 
+[searchProduct]
+  Samples: 1
+  Mean: 1146ms
+  Median: 1146ms
+  95th percentile: 1146ms
+  99th percentile: 1146ms
+  Min: 1146ms
+  Max: 1146ms
+  Anomalies: 0
+2026-03-01 00:47:07 INFO  com.project.ai.api.performance.PerformanceAnomalyDetector - 
+[putAllBrands]
+  Samples: 1
+  Mean: 1119ms
+  Median: 1119ms
+  95th percentile: 1119ms
+  99th percentile: 1119ms
+  Min: 1119ms
+  Max: 1119ms
+  Anomalies: 0
+2026-03-01 00:47:07 INFO  com.project.ai.api.performance.PerformanceAnomalyDetector - 
+[getUserDetail]
+  Samples: 1
+  Mean: 1102ms
+  Median: 1102ms
+  95th percentile: 1102ms
+  99th percentile: 1102ms
+  Min: 1102ms
+  Max: 1102ms
+  Anomalies: 0
+2026-03-01 00:47:07 INFO  com.project.ai.api.performance.PerformanceAnomalyDetector - 
+[createAccount]
+  Samples: 1
+  Mean: 1087ms
+  Median: 1087ms
+  95th percentile: 1087ms
+  99th percentile: 1087ms
+  Min: 1087ms
+  Max: 1087ms
+  Anomalies: 0
+2026-03-01 00:47:07 INFO  com.project.ai.api.performance.PerformanceAnomalyDetector - 
+[deleteVerifyLogin]
+  Samples: 1
+  Mean: 498ms
+  Median: 498ms
+  95th percentile: 498ms
+  99th percentile: 498ms
+  Min: 498ms
+  Max: 498ms
+  Anomalies: 0
+2026-03-01 00:47:07 INFO  com.project.ai.api.performance.PerformanceAnomalyDetector - 
+[updateAccount]
+  Samples: 1
+  Mean: 1139ms
+  Median: 1139ms
+  95th percentile: 1139ms
+  99th percentile: 1139ms
+  Min: 1139ms
+  Max: 1139ms
+  Anomalies: 0
+2026-03-01 00:47:07 INFO  com.project.ai.api.performance.PerformanceAnomalyDetector - 
+[loginInvalid]
+  Samples: 1
+  Mean: 1142ms
+  Median: 1142ms
+  95th percentile: 1142ms
+  99th percentile: 1142ms
+  Min: 1142ms
+  Max: 1142ms
+  Anomalies: 0
+2026-03-01 00:47:07 INFO  com.project.ai.api.performance.PerformanceAnomalyDetector - 
+[postAllProducts]
+  Samples: 1
+  Mean: 1115ms
+  Median: 1115ms
+  95th percentile: 1115ms
+  99th percentile: 1115ms
+  Min: 1115ms
+  Max: 1115ms
+  Anomalies: 0
+2026-03-01 00:47:07 INFO  com.project.ai.api.performance.PerformanceAnomalyDetector - 
+[getAllProducts]
+  Samples: 1
+  Mean: 2638ms
+  Median: 2638ms
+  95th percentile: 2638ms
+  99th percentile: 2638ms
+  Min: 2638ms
+  Max: 2638ms
+  Anomalies: 0
+2026-03-01 00:47:07 INFO  com.project.ai.api.performance.PerformanceAnomalyDetector - 
+[getAllBrands]
+  Samples: 1
+  Mean: 1097ms
+  Median: 1097ms
+  95th percentile: 1097ms
+  99th percentile: 1097ms
+  Min: 1097ms
+  Max: 1097ms
+  Anomalies: 0
+2026-03-01 00:47:07 INFO  com.project.ai.api.performance.PerformanceAnomalyDetector - 
+[searchProductNoParam]
+  Samples: 1
+  Mean: 467ms
+  Median: 467ms
+  95th percentile: 467ms
+  99th percentile: 467ms
+  Min: 467ms
+  Max: 467ms
+  Anomalies: 0
+2026-03-01 00:47:07 INFO  com.project.ai.api.performance.PerformanceAnomalyDetector - 
+[deleteAccount]
+  Samples: 1
+  Mean: 1036ms
+  Median: 1036ms
+  95th percentile: 1036ms
+  99th percentile: 1036ms
+  Min: 1036ms
+  Max: 1036ms
+  Anomalies: 0
+2026-03-01 00:47:07 INFO  com.project.ai.api.performance.PerformanceAnomalyDetector - 
+[verifyLoginNoEmail]
+  Samples: 1
+  Mean: 1073ms
+  Median: 1073ms
+  95th percentile: 1073ms
+  99th percentile: 1073ms
+  Min: 1073ms
+  Max: 1073ms
+  Anomalies: 0
+2026-03-01 00:47:07 INFO  com.project.ai.api.performance.PerformanceAnomalyDetector - 
+================================================================================
+2026-03-01 00:47:07 INFO  com.project.ui.Base.BaseTest - ========== START TEST: testCase01_RegisterUser ==========
+2026-03-01 00:47:07 INFO  com.project.ui.Base.BaseTest - Initializing WebDriver for test: testCase01_RegisterUser

@@ -2,6 +2,7 @@ package com.project.ui.Base;
 
 import com.project.ui.Config.Configreader;
 import com.epam.healenium.SelfHealingDriver;
+import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
@@ -12,6 +13,9 @@ import java.util.Map;
 public class DriverFactory {
 
     public static WebDriver getDriver() {
+
+        // Setup WebDriverManager to automatically download ChromeDriver
+        WebDriverManager.chromedriver().setup();
 
         // Healnium server
         System.setProperty("hlm.server.url", "http://localhost:9090");
